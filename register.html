@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - LifeLink</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-brand">
+                <div class="nav-logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                    </svg>
+                    <span class="nav-title">LifeLink</span>
+                </div>
+            </div>
+            <nav class="nav-links">
+                <a href="dashboard.html" class="nav-link">Dashboard</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Registration Form -->
+    <main class="register-main">
+        <div class="container">
+            <div class="register-content">
+                <div class="register-header">
+                    <h1 class="register-title">Join LifeLink</h1>
+                    <p class="register-description">Register as a donor or recipient to help save lives</p>
+                </div>
+
+                <div class="form-container">
+                    <div class="tab-buttons">
+                        <button class="tab-button active" data-tab="donor">Donor Registration</button>
+                        
+                    </div>
+
+                    <!-- Donor Form -->
+                    <form id="donor-form" class="registration-form active">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="donor-name" class="form-label">Full Name *</label>
+                                <input type="text" id="donor-name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-email" class="form-label">Email Address *</label>
+                                <input type="email" id="donor-email" name="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="donor-phone" name="phone" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-blood-type" class="form-label">Blood Type *</label>
+                                <select id="donor-blood-type" name="bloodType" class="form-select" required>
+                                    <option value="">Select Blood Type</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="donor-address" class="form-label">Address *</label>
+                                <input type="text" id="donor-address" name="address" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-city" class="form-label">City *</label>
+                                <input type="text" id="donor-city" name="city" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="donor-state" class="form-label">State *</label>
+                                <input type="text" id="donor-state" name="state" class="form-input" required>
+                            </div>
+                            <!-- Location field -->
+                            <div class="form-group">
+                                <label for="donor-location" class="form-label">Location *</label>
+                                <input type="text" id="donor-location" name="location" class="form-input" required>
+                            </div>
+                            <!-- Last Donation field -->
+                            <div class="form-group">
+                                <label for="donor-last-donation" class="form-label">Last Donation</label>
+                                <input type="text" id="donor-last-donation" name="last_donation" class="form-input" placeholder="e.g., 2 months ago">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3 class="section-title">Donation Preferences</h3>
+                            <div class="checkbox-group">
+                                <label class="checkbox-label">
+    <input type="checkbox" name="donationType" value="blood" class="checkbox">
+    <span class="checkbox-text">Blood Donation</span>
+</label>
+<label class="checkbox-label">
+    <input type="checkbox" name="donationType" value="organs" class="checkbox">
+    <span class="checkbox-text">Organ Donation</span>
+</label>
+<label class="checkbox-label">
+    <input type="checkbox" name="donationType" value="platelets" class="checkbox">
+    <span class="checkbox-text">Platelet Donation</span>
+</label>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary full-width">Register as Donor</button>
+                        </div>
+                    </form>
+
+                    <!-- Recipient Form (not changed) -->
+                    <form id="recipient-form" class="registration-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="recipient-name" class="form-label">Full Name *</label>
+                                <input type="text" id="recipient-name" name="name" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-email" class="form-label">Email Address *</label>
+                                <input type="email" id="recipient-email" name="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="recipient-phone" name="phone" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-blood-type" class="form-label">Blood Type *</label>
+                                <select id="recipient-blood-type" name="bloodType" class="form-select" required>
+                                    <option value="">Select Blood Type</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label for="recipient-hospital" class="form-label">Hospital/Medical Center *</label>
+                                <input type="text" id="recipient-hospital" name="hospital" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-urgency" class="form-label">Urgency Level *</label>
+                                <select id="recipient-urgency" name="urgency" class="form-select" required>
+                                    <option value="">Select Urgency</option>
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                    <option value="critical">Critical</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="recipient-needed" class="form-label">Amount Needed</label>
+                                <input type="text" id="recipient-needed" name="amountNeeded" class="form-input" placeholder="e.g., 2 units">
+                            </div>
+                        </div>
+
+                        <div class="form-section">
+                            <h3 class="section-title">Medical Information</h3>
+                            <div class="form-group full-width">
+                                <label for="recipient-condition" class="form-label">Medical Condition</label>
+                                <textarea id="recipient-condition" name="condition" class="form-textarea" rows="3" placeholder="Brief description of medical condition..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary full-width">Register as Recipient</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+<script>
+document.getElementById('donor-form').addEventListener('submit', async function(event) {
+    event.preventDefault();
+    const data = {
+        name: document.getElementById('donor-name').value,
+        email: document.getElementById('donor-email').value,
+        phone: document.getElementById('donor-phone').value,
+        blood_type: document.getElementById('donor-blood-type').value,
+        address: document.getElementById('donor-address').value,
+        city: document.getElementById('donor-city').value,
+        state: document.getElementById('donor-state').value,
+        location: document.getElementById('donor-location').value,
+        last_donation: document.getElementById('donor-last-donation').value,
+        donation_types: Array.from(document.querySelectorAll('input[name="donationType"]:checked')).map(cb => cb.value).join(','),
+        status: 'Available'
+    };
+    const res = await fetch('http://localhost:3000/api/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+    });
+    let msgDiv = document.getElementById('register-message');
+    if (!msgDiv) {
+        msgDiv = document.createElement('div');
+        msgDiv.id = 'register-message';
+        document.querySelector('.form-container').appendChild(msgDiv);
+    }
+    if (res.ok) {
+        msgDiv.textContent = 'Registration successful!';
+        msgDiv.style.color = 'green';
+        document.getElementById('donor-form').reset();
+    } else {
+        msgDiv.textContent = 'Registration failed. Please try again.';
+        msgDiv.style.color = 'red';
+    }
+});
+</script>
+</body>
+</html>
