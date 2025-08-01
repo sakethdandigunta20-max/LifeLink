@@ -197,11 +197,13 @@ document.getElementById('donor-form').addEventListener('submit', async function(
         donation_types: Array.from(document.querySelectorAll('input[name="donationType"]:checked')).map(cb => cb.value).join(','),
         status: 'Available'
     };
- const res = await fetch('https://lifelinkbackend-o7rv.onrender.com', {
+ // ...existing code...
+    const res = await fetch('https://lifelinkbackend-o7rv.onrender.com/api/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
     });
+// ...existing code...
     let msgDiv = document.getElementById('register-message');
     if (!msgDiv) {
         msgDiv = document.createElement('div');
